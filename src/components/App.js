@@ -18,6 +18,11 @@ export default class App extends Component {
 			todos: [...this.state.todos, { id: Math.random(), text }]
 		})
 	}
+	deleteTodo = (id) => {
+		this.setState({
+			todos: this.state.todo.filter((todo) => todo.id !== id)
+		})
+	}
 	render() {
 		return (
 			<div>
@@ -25,7 +30,7 @@ export default class App extends Component {
 				{this.state.todos.length > 0 && (
 					<Todos todos={this.state.todos} />
 				)}
-				<AddTodo addTodo={this.addTodo} />
+				<AddTodo addTodo={this.addTodo} deleteTodo={this.deleteTodo} />
 			</div>
 		)
 	}
