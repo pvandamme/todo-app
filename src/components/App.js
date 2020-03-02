@@ -20,7 +20,7 @@ export default class App extends Component {
 	}
 	deleteTodo = (id) => {
 		this.setState({
-			todos: this.state.todo.filter((todo) => todo.id !== id)
+			todos: this.state.todos.filter((todo) => todo.id !== id)
 		})
 	}
 	render() {
@@ -28,7 +28,10 @@ export default class App extends Component {
 			<div>
 				<Header todos={this.state.todos} />
 				{this.state.todos.length > 0 && (
-					<Todos todos={this.state.todos} />
+					<Todos
+						todos={this.state.todos}
+						deleteTodo={this.deleteTodo}
+					/>
 				)}
 				<AddTodo addTodo={this.addTodo} deleteTodo={this.deleteTodo} />
 			</div>
