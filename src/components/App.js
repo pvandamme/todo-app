@@ -4,7 +4,7 @@ import Header from './Header'
 import Todos from './Todos'
 import AddTodo from './AddTodo'
 
-class App extends Component {
+export default class App extends Component {
 	state = {
 		todos: [
 			{
@@ -30,5 +30,3 @@ class App extends Component {
 		)
 	}
 }
-
-export default App
