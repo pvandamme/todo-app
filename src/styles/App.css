@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: Roboto;
+	background: linear-gradient(45deg, #fd746c, #ff9068);
+}
+
+header {
+	text-align: center;
+	padding: 2rem 0;
+}
+
+header p {
+	padding: 1rem;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2.6rem;
+	font-weight: 500;
+}
+
+p {
+	font-size: 2rem;
+	font-weight: 300;
+}
+
+.container {
+	max-width: 60rem;
+	margin: 3rem auto;
+	background: #fafafa;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
+	padding-bottom: 2rem;
+}
+
+input,
+button {
+	border: 1px solid #acacacd8;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+
+input {
+	width: 20rem;
+	margin: 0 3rem;
+}
+
+button {
+	cursor: pointer;
+	width: 7rem;
+	border-radius: 0 0.5rem 0.5rem 0rem;
+	margin-left: -50px;
+}
+
+.todos {
+	margin: 2rem 2rem 0 2rem;
+	border: 1px solid #acacacd8;
+	padding: 0.7rem;
+	border-radius: 1rem;
+	border-left: 1.2rem solid #fd746c;
+}
+
+.todos p {
+	font-size: 1.5rem;
+}
+
+.todos p:hover {
+	text-decoration: line-through;
+	cursor: pointer;
+}

@@ -1,14 +1,14 @@
 import React from 'react'
 
 const Header = ({ todos }) => (
-	<div>
-		<h1>TODO APP</h1>
+	<header>
+		<h1>TODO</h1>
 		{todos.length > 0 ? (
-			<p>Vous avez {todos.length} todo !</p>
+			<p>You have {todos.length} left !</p>
 		) : (
-			<p>Vous n'avez pas de todo !</p>
+			<p>You have no todo !</p>
 		)}
-	</div>
+	</header>
 )
 
 export default Header

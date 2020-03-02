@@ -25,15 +25,15 @@ export default class App extends Component {
 	}
 	render() {
 		return (
-			<div>
+			<div className="container">
 				<Header todos={this.state.todos} />
+				<AddTodo addTodo={this.addTodo} deleteTodo={this.deleteTodo} />
 				{this.state.todos.length > 0 && (
 					<Todos
 						todos={this.state.todos}
 						deleteTodo={this.deleteTodo}
 					/>
 				)}
-				<AddTodo addTodo={this.addTodo} deleteTodo={this.deleteTodo} />
 			</div>
 		)
 	}
