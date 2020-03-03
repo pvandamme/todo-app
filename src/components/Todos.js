@@ -1,14 +1,9 @@
 import React from 'react'
+import Todo from './Todo'
 
-const Todos = ({ todos, deleteTodo }) => {
-	return todos.map((todo) => (
-		<div
-			className="todos"
-			key={todo.id}
-			onClick={() => deleteTodo(todo.id)}>
-			<p>{todo.text}</p>
-		</div>
+const Todos = ({ todos, deleteTodo }) =>
+	todos.map((todo) => (
+		<Todo todo={todo} key={todo.id} deleteTodo={deleteTodo} />
 	))
-}
 
 export default Todos
