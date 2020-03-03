@@ -38,14 +38,14 @@ p {
 	padding-bottom: 2rem;
 }
 
-input,
+.add-todo,
 button {
 	border: 1px solid #acacacd8;
 	border-radius: 0.5rem;
 	padding: 0.5rem;
 }
 
-input {
+.add-todo {
 	width: 20rem;
 	margin: 0 2rem;
 }
@@ -57,19 +57,17 @@ button {
 	margin-left: -50px;
 }
 
-.todos {
-	margin: 2rem 2rem 0 2rem;
+.todo {
 	border: 1px solid #acacacd8;
 	padding: 0.7rem;
 	border-radius: 1rem;
 	border-right: 1.2rem solid #fd746c;
-}
-
-.todos p {
 	font-size: 1.5rem;
+	flex-grow: 1;
+	margin-left: 1rem;
 }
 
-.todos p:hover {
+.todo:hover {
 	text-decoration: line-through;
 	cursor: pointer;
 	opacity: 60%;
@@ -79,4 +77,10 @@ button {
 	margin: 1rem 2rem;
 	color: red;
 	font-size: 1.5rem;
+}
+
+.todos {
+	display: flex;
+	margin: 2rem 2rem 0 1rem;
+	align-items: center;
 }

@@ -37,7 +37,7 @@ export default class App extends Component {
 					handleError={this.handleError}
 				/>
 				{this.state.error === true && (
-					<p class="error">Error, you can't set an empty value !</p>
+					<p class="error">Error, you can't add an empty value !</p>
 				)}
 				{this.state.todos.length > 0 && (
 					<Todos

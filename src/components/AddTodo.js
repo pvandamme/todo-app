@@ -15,6 +15,7 @@ const AddTodo = ({ addTodo, handleError }) => {
 		<div>
 			<form onSubmit={handleSubmit}>
 				<input
+					className="add-todo"
 					type="text"
 					name="todo"
 					placeholder="Add a new todo..."
