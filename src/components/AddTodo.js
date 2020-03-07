@@ -12,16 +12,17 @@ const AddTodo = ({ addTodo, handleError }) => {
 		addTodo(text)
 	}
 	return (
-		<div>
+		<div className="add-todo">
 			<form onSubmit={handleSubmit}>
 				<input
-					className="add-todo"
+					className="round"
 					type="text"
 					name="todo"
-					placeholder="Add a new todo..."
+					placeholder="New todo..."
 				/>
-				<button>Add Todo</button>
+				<button className="round">Add Todo</button>
 			</form>
+			<hr />
 		</div>
 	)
 }

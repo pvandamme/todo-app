@@ -6,81 +6,93 @@
 
 html {
 	font-size: 62.5%;
-	font-family: Roboto;
-	background: linear-gradient(45deg, #fd746c, #ff9068);
+	font-family: 'Dosis', sans-serif;
+	background-color: #ba53de;
+}
+
+.container {
+	max-width: 42.5rem;
+	background-color: #f469a9;
+	margin: 10rem auto;
+	border-radius: 10px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 2rem;
+	position: relative;
 }
 
 header {
 	text-align: center;
-	padding: 2rem 0;
+	padding-top: 2rem;
+}
+
+header a {
+	position: absolute;
+	top: 0.8rem;
+	right: 1rem;
+	color: rgba(0, 0, 0, 0.7);
+	text-decoration: none;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+header h1 {
+	color: white;
+	font-weight: bold;
+	font-size: 4.8rem;
 }
 
 header p {
-	padding: 1rem;
-	font-weight: 400;
-}
-
-h1 {
-	font-size: 3rem;
-}
-
-p {
-	font-size: 2rem;
-	font-weight: 300;
-}
-
-.container {
-	max-width: 60rem;
-	margin: 3rem auto;
-	background: #fafafa;
-	border-radius: 5px;
-	box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
-	padding-bottom: 2rem;
-}
-
-.add-todo,
-button {
-	border: 1px solid #acacacd8;
-	border-radius: 0.5rem;
-	padding: 0.5rem;
+	color: #f4fa9c;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 2.4rem;
 }
 
 .add-todo {
-	width: 20rem;
-	margin: 0 2rem;
+	margin-top: 2rem;
 }
 
-button {
+.round {
+	border-radius: 10px;
+	padding: 0.4rem;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.add-todo input {
+	border-radius: 10px 0px 0px 10px;
+	font-weight: 500;
+}
+
+.add-todo button {
+	border-radius: 0px 10px 10px 0px;
+	background: #88bef5;
 	cursor: pointer;
-	width: 7rem;
-	border-radius: 0 0.5rem 0.5rem 0rem;
-	margin-left: -50px;
+	color: white;
+}
+
+hr {
+	margin-top: 2rem;
+	border: 1px solid #fff98dda;
 }
 
 .todo {
-	border: 1px solid #acacacd8;
-	padding: 0.7rem;
-	border-radius: 1rem;
-	border-right: 1.2rem solid #fd746c;
-	font-size: 1.5rem;
-	flex-grow: 1;
-	margin-left: 1rem;
-}
-
-.todo:hover {
-	text-decoration: line-through;
-	cursor: pointer;
-	opacity: 60%;
-}
-
-.error {
-	margin: 1rem 2rem;
-	color: red;
-	font-size: 1.5rem;
-}
-
-.todos {
 	display: flex;
-	margin: 2rem 2rem 0 1rem;
 	align-items: center;
+	margin-top: 2rem;
+	font-size: 1.3rem;
+}
+
+.todo__text {
+	flex-grow: 1;
+	font-weight: 500;
+	background-color: #ffffff;
+	border-radius: 10px 0px 0px 10px;
+}
+
+.delete {
+	cursor: pointer;
+	width: 4rem;
+	text-align: center;
+	border-radius: 0px 10px 10px 0px;
+	background-color: #88bef5;
 }
