@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AddTodo = ({ color, handleColorChange, addTodo, handleError }) => {
+const AddTodo = ({ color, addTodo, handleError }) => {
 	const handleSubmit = (e) => {
 		const text = e.target.elements.todo.value.trim()
 		e.preventDefault()
@@ -11,11 +11,8 @@ const AddTodo = ({ color, handleColorChange, addTodo, handleError }) => {
 		e.target.elements.todo.value = ''
 		addTodo(text)
 	}
-	const handleChange = (e) => {
-		handleColorChange(e.target.value)
-	}
 	return (
-		<div className="add-todo">
+		<div>
 			<form onSubmit={handleSubmit}>
 				<input
 					className="round"
@@ -25,11 +22,6 @@ const AddTodo = ({ color, handleColorChange, addTodo, handleError }) => {
 				/>
 				<button className={'round ' + color}>Add Todo</button>
 			</form>
-			<select className="round" onChange={handleChange}>
-				<option value="blue">Blue</option>
-				<option value="red">Red</option>
-				<option value="green">Green</option>
-			</select>
 		</div>
 	)
 }

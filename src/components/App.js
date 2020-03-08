@@ -3,6 +3,7 @@ import '../styles/App.css'
 import Header from './Header'
 import Todos from './Todos'
 import AddTodo from './AddTodo'
+import SelectColor from './SelectColor'
 
 export default class App extends Component {
 	state = {
@@ -34,12 +35,14 @@ export default class App extends Component {
 		return (
 			<div className="container">
 				<Header todos={this.state.todos} />
-				<AddTodo
-					color={this.state.color}
-					handleColorChange={this.handleColorChange}
-					addTodo={this.addTodo}
-					handleError={this.handleError}
-				/>
+				<div class="add-todo">
+					<AddTodo
+						color={this.state.color}
+						addTodo={this.addTodo}
+						handleError={this.handleError}
+					/>
+					<SelectColor handleColorChange={this.handleColorChange} />
+				</div>
 				{this.state.error === true && (
 					<p class="error">Error, you can't add an empty value !</p>
 				)}
