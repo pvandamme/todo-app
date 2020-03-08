@@ -4,7 +4,9 @@ const Todo = ({ todo, deleteTodo }) => {
 	return (
 		<div className="todo">
 			<p className="todo__text round">{todo.text}</p>
-			<p className="delete round" onClick={() => deleteTodo(todo.id)}>
+			<p
+				className={'delete round ' + todo.color}
+				onClick={() => deleteTodo(todo.id)}>
 				X
 			</p>
 		</div>

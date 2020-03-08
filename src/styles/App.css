@@ -25,7 +25,7 @@ header {
 	padding-top: 2rem;
 }
 
-header a {
+header p:first-of-type {
 	position: absolute;
 	top: 0.8rem;
 	right: 1rem;
@@ -33,6 +33,7 @@ header a {
 	text-decoration: none;
 	font-size: 1.4rem;
 	font-weight: 500;
+	cursor: pointer;
 }
 
 header h1 {
@@ -50,22 +51,25 @@ header p {
 
 .add-todo {
 	margin-top: 2rem;
+	display: flex;
 }
 
 .round {
 	border-radius: 10px;
 	padding: 0.4rem;
 	border: 1px solid rgba(0, 0, 0, 0.5);
+	font-size: 1.3rem;
 }
 
 .add-todo input {
 	border-radius: 10px 0px 0px 10px;
 	font-weight: 500;
+	font-size: 1.3rem;
 }
 
 .add-todo button {
 	border-radius: 0px 10px 10px 0px;
-	background: #88bef5;
+	background-color: #88bef5;
 	cursor: pointer;
 	color: white;
 }
@@ -79,7 +83,6 @@ hr {
 	display: flex;
 	align-items: center;
 	margin-top: 2rem;
-	font-size: 1.3rem;
 }
 
 .todo__text {
@@ -95,4 +98,51 @@ hr {
 	text-align: center;
 	border-radius: 0px 10px 10px 0px;
 	background-color: #88bef5;
+}
+
+select {
+	margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 370px) {
+	.add-todo {
+		flex-direction: column;
+		align-items: center;
+	}
+	select {
+		margin-top: 1rem;
+		margin-left: 0;
+	}
+}
+
+form {
+	display: flex;
+}
+
+.error {
+	margin-top: 1rem;
+	font-size: 1.3rem;
+}
+
+@media screen and (max-width: 500px) {
+	.container {
+		margin: auto;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	html {
+		background-color: #f469a9;
+	}
+}
+
+.red {
+	background-color: #ff6c6c !important;
+}
+
+.green {
+	background-color: #88f5a0 !important;
+}
+
+.blue {
+	background-color: #88bef5 !important;
 }
